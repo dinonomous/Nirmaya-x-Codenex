@@ -10,6 +10,7 @@ const baumans = Baumans({
 const Welcome = () => {
   return (
     <>
+
       <div className={baumans.className}>
         <div className="flex items-center justify-center p-4 gap-7 md:gap-9 lg:gap-10">
           <div className="w-[148px] h-[152px] md:w-[248px] md:h-[252px] lg:w-[591px] lg:h-[342px]">
@@ -22,6 +23,8 @@ const Welcome = () => {
           <Image src={amico} alt="Example Image" className=" w-[192px] h-[229px] md:w-[322px] md:h-[379px] lg:w-[580px] lg:h-[694px]" />
         </div>
       </div>
+
+      
     </>
   );
 };
