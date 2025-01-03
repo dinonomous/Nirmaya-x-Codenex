@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Hero } from "@/components/pages/heroPage/Page";
 import Navbar from "@/components/navbar/Page";
+import Welcome  from "@/components/pages/WelcomePage/page"
 import { About } from "@/components/pages/AboutEventPage/page";
 import { Prizes } from "@/components/pages/Prizes/page";
 import { Sponsors } from "@/components/pages/sponsers/page";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main className="mt-32 w-full">
         <Hero />
+        <Welcome/>
         <About />
         <Prizes />
         <Sponsors />
