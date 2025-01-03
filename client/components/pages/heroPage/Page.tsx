@@ -1,58 +1,93 @@
-"use client";
-import React from "react";
-import { TypeAnimation } from "react-type-animation";
-import DottedButton from "../../ui/Button";
-import { FaDiscord } from "react-icons/fa";
-import { Calender } from "../../callender/page";
+import Image from "next/image";
+import { Michroma, Baumans } from "next/font/google";
 
+export const michorma = Michroma({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+export const baumans = Baumans({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+/**
+ * The hero section of the website
+ *
+ * This component renders the hero section of the website, which includes a
+ * background image, a heading, and a subheading.
+ *
+ * @returns The hero section component
+ */
 export const Hero = () => {
+  const codeTextGradient = "linear-gradient(90deg, #757AD0 0%, #CD89D7 100%)";
   return (
-    <div className="w-full">
-    <div className="w-full h-[60vh] p-8 flex flex-col justify-center items-center">
-      <div className=" flex flex-col items-start justify-center h-full gap-4 w-5/6">
-        <h1 className="text-5xl font-bold">Join Limbo Hack</h1>
-        <div className="relative w-fit">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed once, initially
-              "We produce food for Mice",
-              1000,
-              "We produce food for Hamsters",
-              1000,
-              "We produce food for Guinea Pigs",
-              1000,
-              "We produce food for Chinchillas",
-              1000,
-            ]}
-            speed={50}
-            style={{ fontSize: "2em" }}
-            repeat={Infinity}
-            className=""
-          />
+    <div
+      style={michorma.style}
+      className="w-full relative flex justify-center items-center"
+    >
+      {/* Background */}
+      <img
+        alt="Looper background"
+        src="/images/hero-section-looper-bg.png"
+        className="w-full h-auto object-cover"
+      />
+
+      {/* Text */}
+      <div className="flex flex-col md:gap-4 items-center absolute lg:bottom-1/2 md:bottom-[30%] bottom-[28%]">
+        <div className="relative">
+          <h1
+            style={{
+              background: codeTextGradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontSize: "clamp(26px, 6vw, 96px)",
+            }}
+            className=" text-[96px] relative left-[18%] "
+          >
+            people&apos;s
+          </h1>
+          <h1
+            style={{ fontSize: "clamp(26px, 6vw, 96px)" }}
+            className=" bg-transparent leading-[50px]"
+          >
+            The <span className=" line-through">Code</span> Business
+          </h1>
         </div>
-        <p className="text-4xl font-extralight">
-          Join us on 20th November 2021 with over 300 students from across the
-          nation for 24 hours of creation, innovation, & fun.
-        </p>
-        <DottedButton className="flex items-center gap-4">
-          <FaDiscord width={"20px"} height={"20px"} />
-          join Discord
-        </DottedButton>
-        <div className="flex w-full gap-4">
-        <DottedButton className="flex items-center gap-4 w-40">
-          <FaDiscord width={"20px"} height={"20px"} />
-          judge
-        </DottedButton>
-        <DottedButton className="flex items-center gap-4 w-44">
-          <FaDiscord width={"20px"} height={"20px"} />
-          register
-        </DottedButton>
+
+        <div className="relative">
+          {/* Central Image */}
+          <Image
+            alt="Hero section image"
+            src="/images/hero-section-image.png"
+            width={686}
+            height={457}
+            className="md:w-[686px] md:h-[457px] w-[340px] h-[220px]"
+            objectFit="contain"
+          />
+          <div
+            style={{
+              background: codeTextGradient,
+            }}
+            className="-z-10 blur-3xl md:w-[980px] md:h-[980px] w-[340px] h-[360px] opacity-60  bg-[#18311f] border-8 border-white border-opacity-5 rounded-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          ></div>
+        </div>
+        <h2 style={{ fontSize: "clamp(22px, 4vw, 64px)" }}>
+          Where{" "}
+          <span
+            style={{
+              ...baumans.style,
+              background: codeTextGradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            idea&apos;s
+          </span>{" "}
+          take lead
+        </h2>
       </div>
-      </div>
-    </div>
-    <div className="w-full flex items-center justify-center">
-    <Calender />
-    </div>
     </div>
   );
 };
+
