@@ -30,7 +30,7 @@ export const Hero = () => {
       <img
         alt="Looper background"
         src="/images/hero-section-looper-bg.svg"
-        className="w-full h-auto object-cover"
+        className="w-[92%] h-auto object-cover"
       />
 
       {/* Text */}
