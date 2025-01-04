@@ -29,7 +29,7 @@ export const Hero = () => {
       {/* Background */}
       <img
         alt="Looper background"
-        src="/images/hero-section-looper-bg.png"
+        src="/images/hero-section-looper-bg.svg"
         className="w-full h-auto object-cover"
       />
 
@@ -59,7 +59,7 @@ export const Hero = () => {
           {/* Central Image */}
           <Image
             alt="Hero section image"
-            src="/images/hero-section-image.png"
+            src="/images/hero-section-image.svg"
             width={686}
             height={457}
             className="md:w-[686px] md:h-[457px] w-[340px] h-[220px]"
@@ -90,4 +90,3 @@ export const Hero = () => {
     </div>
   );
 };
-
