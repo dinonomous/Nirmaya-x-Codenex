@@ -1,5 +1,5 @@
 import React from "react";
-import { Michroma, Baumans, Mynerve, Caveat } from "next/font/google";
+import { Michroma, Baumans } from "next/font/google";
 
 export const michorma = Michroma({
   weight: "400",
