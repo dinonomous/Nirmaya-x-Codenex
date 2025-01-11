@@ -1,4 +1,5 @@
-import DottedButton from "@/components/ui/Button";
+import { Michroma } from "next/font/google";
+const michorma = Michroma({ weight: "400", subsets: ["latin"], preload: true });
 import React from "react";
 
 export const Sponsors = () => {
@@ -12,21 +13,26 @@ export const Sponsors = () => {
   ];
 
   return (
-    <div id="sponsors" className="p-10 rounded-3xl m-4 shadow-lg">
+    <div
+      id="sponsors"
+      className={`${michorma.className} p-10 rounded-3xl m-4 shadow-lg relative`}
+    >
+      <img
+        alt="Looper background"
+        src="/images/hero-section-looper-bg.svg"
+        className="w-[100%] h-auto object-cover absolute top-0"
+      />
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-white">Our Sponsors</h1>
-        <p className="text-white">We are proudly supported by these amazing sponsors.</p>
-        <p>Interested in Sponsoring</p>
-        <DottedButton className="m-4">
-            Sponser us
-        </DottedButton>
+        <h1 className="font-bold text-transparent bg-clip-text text-4xl sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-b from-[#757AD0] to-[#CD89D7]">
+          Our Sponsors
+        </h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-center mt-32">
         {sponsors.map((sponsor) => (
           <div
             key={sponsor.id}
-            className=" shadow-md rounded-lg p-4 flex justify-center items-center hover:shadow-lg transition-shadow"
+            className="bg-gradient-to-r from-[#ffffff80] to-[#dfb7fc62] backdrop-blur-md shadow-md rounded-3xl p-4 flex justify-center items-center hover:shadow-lg transition-shadow h-60"
           >
             <img
               src={sponsor.logo}
