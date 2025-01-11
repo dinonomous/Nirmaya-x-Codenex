@@ -1,15 +1,8 @@
 import Image from "next/image";
 import { Michroma, Baumans } from "next/font/google";
 
-export const michorma = Michroma({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-export const baumans = Baumans({
-  weight: "400",
-  subsets: ["latin"],
-});
+const michorma = Michroma({ weight: "400", subsets: ["latin"], preload: true });
+const baumans = Baumans({ weight: "400", subsets: ["latin"], preload: true });
 
 /**
  * The hero section of the website
@@ -22,10 +15,7 @@ export const baumans = Baumans({
 export const Hero = () => {
   const codeTextGradient = "linear-gradient(90deg, #757AD0 0%, #CD89D7 100%)";
   return (
-    <div
-      style={michorma.style}
-      className="w-full relative flex justify-center items-center"
-    >
+<div className={`${michorma.className} w-full relative flex justify-center items-center`}>
       {/* Background */}
       <img
         alt="Looper background"

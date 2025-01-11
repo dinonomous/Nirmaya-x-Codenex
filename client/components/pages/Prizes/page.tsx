@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Michroma, Baumans, Mynerve, Caveat } from "next/font/google";
+import { Michroma, Baumans, Caveat } from "next/font/google";
 import img1 from "@/public/assets/rewptch.png"
 import img2 from "@/public/assets/rewbld.png"
 import img3 from "@/public/assets/rewintrn.png"
