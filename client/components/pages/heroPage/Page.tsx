@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Michroma, Baumans } from "next/font/google";
-
+import Welcome from "../WelcomePage/page";
 const michorma = Michroma({ weight: "400", subsets: ["latin"], preload: true });
 const baumans = Baumans({ weight: "400", subsets: ["latin"], preload: true });
 
@@ -15,16 +15,16 @@ const baumans = Baumans({ weight: "400", subsets: ["latin"], preload: true });
 export const Hero = () => {
   const codeTextGradient = "linear-gradient(90deg, #757AD0 0%, #CD89D7 100%)";
   return (
-<div className={`${michorma.className} w-full relative flex justify-center items-center`}>
+<div className={`${michorma.className} w-full relative flex flex-col justify-center items-center mt-20 lg:mt-0`}>
       {/* Background */}
       <img
         alt="Looper background"
         src="/images/hero-section-looper-bg.svg"
-        className="w-[92%] h-auto object-cover"
+        className="w-[100%] h-auto object-cover absolute top-0"
       />
 
       {/* Text */}
-      <div className="flex flex-col md:gap-4 items-center absolute lg:bottom-1/2 md:bottom-[30%] bottom-[28%]">
+      <div className="flex flex-col md:gap-4 items-center h-auto lg:h-[110vh] justify-center">
         <div className="relative">
           <h1
             style={{
@@ -52,7 +52,7 @@ export const Hero = () => {
             src="/images/hero-section-image.svg"
             width={686}
             height={457}
-            className="md:w-[686px] md:h-[457px] w-[340px] h-[220px]"
+            className=""
             objectFit="contain"
           />
           <div
@@ -77,6 +77,7 @@ export const Hero = () => {
           take lead
         </h2>
       </div>
+      <Welcome />
     </div>
   );
 };
