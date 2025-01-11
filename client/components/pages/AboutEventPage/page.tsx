@@ -25,7 +25,7 @@ export const About = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 pb-8">
         {aboutData.accordionItems.map((item, index) => (
-          <div className="rounded-full">
+          <div className="rounded-full" key={index}>
             <AccordionExpand
               key={index}
               expandDefault={index === 0} // Expand the first accordion by default

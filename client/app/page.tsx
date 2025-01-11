@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Hero } from "@/components/pages/heroPage/Page";
 import Navbar from "@/components/navbar/Page";
 import Welcome  from "@/components/pages/WelcomePage/page"
